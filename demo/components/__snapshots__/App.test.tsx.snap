@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Modal
+          closeModal={[Function]}
+          shouldShowModal={false}
+          style={Object {}}
+          title="Modal Demo"
+        >
+          <div>
+            This is @bdenzer/react-modal. You can put any React Component in this body section.
+          </div>
+        </Modal>,
+        <div
+          style={
+            Object {
+              "fontFamily": "Arial, Helvetica, sans-serif",
+              "textAlign": "center",
+            }
+          }
+        >
+          <h1>
+            @bdenzer/react-modal Demo
+          </h1>
+          <button
+            id="demo-button"
+            onClick={[Function]}
+          >
+            Open Modal
+          </button>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <div>
+            This is @bdenzer/react-modal. You can put any React Component in this body section.
+          </div>,
+          "closeModal": [Function],
+          "shouldShowModal": false,
+          "style": Object {},
+          "title": "Modal Demo",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "This is @bdenzer/react-modal. You can put any React Component in this body section.",
+          },
+          "ref": null,
+          "rendered": "This is @bdenzer/react-modal. You can put any React Component in this body section.",
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              @bdenzer/react-modal Demo
+            </h1>,
+            <button
+              id="demo-button"
+              onClick={[Function]}
+            >
+              Open Modal
+            </button>,
+          ],
+          "style": Object {
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "textAlign": "center",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "@bdenzer/react-modal Demo",
+            },
+            "ref": null,
+            "rendered": "@bdenzer/react-modal Demo",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Open Modal",
+              "id": "demo-button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Open Modal",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Modal
+            closeModal={[Function]}
+            shouldShowModal={false}
+            style={Object {}}
+            title="Modal Demo"
+          >
+            <div>
+              This is @bdenzer/react-modal. You can put any React Component in this body section.
+            </div>
+          </Modal>,
+          <div
+            style={
+              Object {
+                "fontFamily": "Arial, Helvetica, sans-serif",
+                "textAlign": "center",
+              }
+            }
+          >
+            <h1>
+              @bdenzer/react-modal Demo
+            </h1>
+            <button
+              id="demo-button"
+              onClick={[Function]}
+            >
+              Open Modal
+            </button>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <div>
+              This is @bdenzer/react-modal. You can put any React Component in this body section.
+            </div>,
+            "closeModal": [Function],
+            "shouldShowModal": false,
+            "style": Object {},
+            "title": "Modal Demo",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "This is @bdenzer/react-modal. You can put any React Component in this body section.",
+            },
+            "ref": null,
+            "rendered": "This is @bdenzer/react-modal. You can put any React Component in this body section.",
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                @bdenzer/react-modal Demo
+              </h1>,
+              <button
+                id="demo-button"
+                onClick={[Function]}
+              >
+                Open Modal
+              </button>,
+            ],
+            "style": Object {
+              "fontFamily": "Arial, Helvetica, sans-serif",
+              "textAlign": "center",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "@bdenzer/react-modal Demo",
+              },
+              "ref": null,
+              "rendered": "@bdenzer/react-modal Demo",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Open Modal",
+                "id": "demo-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Open Modal",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
