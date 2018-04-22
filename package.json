@@ -5,20 +5,35 @@
     "Simple modal component for React. Styled to look like Bootstrap's modal",
   "main": "./lib/Modal.js",
   "scripts": {
-    "test": "npm test",
+    "test": "jest",
     "start": "parcel ./demo/index.html -p 3000",
     "build": "tsc ./src/Modal/Modal.tsx --outDir ./lib --jsx react",
     "build-demo": "parcel build ./demo/index.html"
   },
   "author": "Ben Denzer",
   "license": "MIT",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": ".test.tsx?$",
+    "moduleDirectories": ["node_modules"],
+    "moduleFileExtensions": ["ts", "tsx", "js"]
+  },
   "devDependencies": {
+    "@types/enzyme": "^3.1.10",
+    "@types/jest": "^22.2.3",
     "@types/react": "16.3.12",
     "@types/react-dom": "16.0.5",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3",
     "node": "8.9.0",
     "parcel-bundler": "1.7.1",
     "react": "16.3.2",
     "react-dom": "16.3.2",
+    "ts-jest": "^22.4.4",
     "typescript": "2.8.3",
     "yarn": "1.6.0"
   },
