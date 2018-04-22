@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as enzyme from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import Modal from './Modal';
 
 describe('Modal', () => {
@@ -9,11 +9,11 @@ describe('Modal', () => {
   });
 
   it('should render without crashing', () => {
-    enzyme.shallow(<Modal closeModal={closeModal} shouldShowModal={true} />);
+    shallow(<Modal closeModal={closeModal} shouldShowModal={true} />);
   });
 
   it('should show the title if it is given one', () => {
-    const wrapper = enzyme.shallow(
+    const wrapper = shallow(
       <Modal closeModal={closeModal} shouldShowModal={true} title="My Title" />
     );
     const titleText = wrapper.find('#modal-modalTitle').text();
@@ -21,7 +21,7 @@ describe('Modal', () => {
   });
 
   it('should show body content', () => {
-    const wrapper = enzyme.shallow(
+    const wrapper = shallow(
       <Modal closeModal={closeModal} shouldShowModal={true}>
         Here is some body content
       </Modal>
@@ -31,7 +31,7 @@ describe('Modal', () => {
   });
 
   it('should call closeModal if close button is clicked', () => {
-    const wrapper = enzyme.shallow(
+    const wrapper = shallow(
       <Modal closeModal={closeModal} shouldShowModal={true} />
     );
     wrapper.find('#modal-closeButton').simulate('click');
@@ -39,7 +39,7 @@ describe('Modal', () => {
   });
 
   it('should call closeModal if background is clicked', () => {
-    const wrapper = enzyme.mount(
+    const wrapper = mount(
       <Modal closeModal={closeModal} shouldShowModal={true} />
     );
     wrapper.find('#modal-modalBg').simulate('click');

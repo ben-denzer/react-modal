@@ -19,8 +19,8 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": ".test.tsx?$",
-    "moduleDirectories": ["node_modules"],
-    "moduleFileExtensions": ["ts", "tsx", "js"]
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "modulePathIgnorePatterns": ["node_modules"]
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.10",

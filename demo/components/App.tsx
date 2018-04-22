@@ -37,13 +37,15 @@ class App extends React.Component<{}, IAppState> {
           title="Modal Demo"
         >
           <div>
-            This is @bdenzer/react-modal. You can put any React Component in
+            This is @ben-denzer/react-modal. You can put any React Component in
             this body section.
           </div>
         </Modal>
         <div style={mainDivStyle}>
-          <h1>@bdenzer/react-modal Demo</h1>
-          <button onClick={this.openModal}>Open Modal</button>
+          <h1>@ben-denzer/react-modal Demo</h1>
+          <button id="demo-button" onClick={this.openModal}>
+            Open Modal
+          </button>
         </div>
       </React.Fragment>
     );
