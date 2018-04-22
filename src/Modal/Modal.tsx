@@ -50,8 +50,8 @@ class Modal extends React.Component<IModalProps, IModalState> {
   }
 
   closeOnBgClick(e: React.MouseEvent<HTMLElement>): void {
-    const { dataset } = e.target as HTMLElement;
-    if (!dataset.targetId || dataset.targetId !== 'modalBg') {
+    const { id } = e.target as HTMLElement;
+    if (!id || id !== 'modal-modalBg') {
       return;
     }
     this.props.closeModal();
@@ -92,13 +92,14 @@ class Modal extends React.Component<IModalProps, IModalState> {
     return (
       <div
         style={this.calculateBgStyle()}
-        data-target-id="modalBg"
+        id="modal-modalBg"
         onClick={this.closeOnBgClick}
       >
-        <div style={modalInner}>
-          <div style={modalHeader}>
-            <div>{this.props.title}</div>
+        <div id="modal-modalInner" style={modalInner}>
+          <div id="modal-modalHeader" style={modalHeader}>
+            <div id="modal-modalTitle">{this.props.title}</div>
             <div
+              id="modal-closeButton"
               onClick={this.props.closeModal}
               onMouseOut={this.buttonMouseOut}
               onMouseOver={this.mouseOverButton}
@@ -107,7 +108,9 @@ class Modal extends React.Component<IModalProps, IModalState> {
               X
             </div>
           </div>
-          <div style={modalBody}>{this.props.children}</div>
+          <div id="modal-modalBody" style={modalBody}>
+            {this.props.children}
+          </div>
         </div>
       </div>
     );
