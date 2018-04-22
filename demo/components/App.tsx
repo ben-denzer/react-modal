@@ -6,7 +6,8 @@ interface IAppState {
 }
 
 const mainDivStyle: React.CSSProperties = {
-  textAlign: 'center'
+  textAlign: 'center',
+  fontFamily: 'Arial, Helvetica, sans-serif'
 };
 
 class App extends React.Component<{}, IAppState> {
@@ -18,12 +19,15 @@ class App extends React.Component<{}, IAppState> {
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
   }
+
   closeModal(): void {
     this.setState({ shouldShowModal: false });
   }
+
   openModal(): void {
     this.setState({ shouldShowModal: true });
   }
+
   render(): JSX.Element {
     return (
       <React.Fragment>

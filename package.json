@@ -1,18 +1,24 @@
 {
-  "name": "bdenzer-modal",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./lib/index.js",
+  "name": "@ben-denzer/react-modal",
+  "version": "0.4.5",
+  "description":
+    "Simple modal component for React. Styled to look like Bootstrap's modal",
+  "main": "./lib/Modal.js",
   "scripts": {
     "test": "npm test",
-    "build": "tsc ./src/Modal/Modal.tsx --outDir ./lib --jsx react"
+    "start": "parcel ./demo/index.html -p 3000",
+    "build": "tsc ./src/Modal/Modal.tsx --outDir ./lib --jsx react",
+    "build-demo": "parcel build ./demo/index.html"
   },
   "author": "Ben Denzer",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "16.3.12",
+    "@types/react-dom": "16.0.5",
     "node": "8.9.0",
     "parcel-bundler": "1.7.1",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
     "typescript": "2.8.3",
     "yarn": "1.6.0"
   },

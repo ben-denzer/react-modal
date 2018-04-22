@@ -1,6 +1,6 @@
 const headerHeight = 50;
 const interiorPadding = 20;
-export const modalAnimationTime = 900;
+export const modalAnimationTime = 300;
 
 export const closeButton: React.CSSProperties = {
   height: `${headerHeight}px`,
@@ -14,6 +14,7 @@ export const closeButton: React.CSSProperties = {
 
 export const modalBackground: React.CSSProperties = {
   position: 'fixed',
+  zIndex: 9999,
   height: '100vh',
   width: '100vw',
   top: '0',
@@ -32,7 +33,7 @@ export const modalBackgroundTransition: React.CSSProperties = {
 export const modalBackgroundOpen: React.CSSProperties = {
   display: 'block',
   opacity: 1,
-  paddingTop: '75px'
+  paddingTop: '45px'
 };
 
 export const modalBody: React.CSSProperties = {
@@ -56,5 +57,6 @@ export const modalInner: React.CSSProperties = {
   maxWidth: '700px',
   minHeight: '200px',
   backgroundColor: 'white',
-  borderRadius: '2px'
+  borderRadius: '2px',
+  fontFamily: 'Arial, Helvetica, sans-serif'
 };

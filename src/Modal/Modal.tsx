@@ -10,19 +10,23 @@ import {
   modalInner
 } from './ModalStyles';
 
-interface Props {
+interface IModalProps {
   shouldShowModal: boolean;
-  title: string;
+  style?: React.CSSProperties;
+  title?: string;
   closeModal(): void;
 }
 
-interface State {
+interface IModalState {
   buttonIsHovered: boolean;
   modalClassName: '' | 'open' | 'transition';
 }
 
-class Modal extends React.Component<Props, State> {
-  constructor(props: Props) {
+class Modal extends React.Component<IModalProps, IModalState> {
+  public static defaultProps: Partial<IModalProps> = {
+    style: {}
+  };
+  constructor(props: IModalProps) {
     super(props);
     this.state = {
       buttonIsHovered: false,
@@ -34,7 +38,7 @@ class Modal extends React.Component<Props, State> {
     this.toggleModalClass = this.toggleModalClass.bind(this);
   }
 
-  componentDidUpdate(prevProps: Props): void {
+  componentDidUpdate(prevProps: IModalProps): void {
     const nextModalState: boolean = this.props.shouldShowModal;
     if (prevProps.shouldShowModal !== nextModalState) {
       this.toggleModalClass(nextModalState);
@@ -60,7 +64,7 @@ class Modal extends React.Component<Props, State> {
       transition: modalBackgroundTransition
     };
     const defaultOverrides = styleMap[modalClassName] || {};
-    return { ...modalBackground, ...defaultOverrides };
+    return { ...modalBackground, ...defaultOverrides, ...this.props.style };
   }
 
   calculateButtonStyle(): React.CSSProperties {
