@@ -2,19 +2,19 @@
   "name": "bdenzer-modal",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/Modal.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "npm test",
-    "build": "parcel build ./src/Modal/Modal.tsx"
+    "build": "tsc ./src/Modal/Modal.tsx --outDir ./lib --jsx react"
   },
   "author": "Ben Denzer",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^16.3.12",
-    "parcel-bundler": "^1.7.1",
-    "typescript": "^2.8.3"
+    "@types/react": "16.3.12",
+    "node": "8.9.0",
+    "parcel-bundler": "1.7.1",
+    "typescript": "2.8.3",
+    "yarn": "1.6.0"
   },
-  "dependencies": {
-    "react": "^16.3.2"
-  }
+  "dependencies": {}
 }
