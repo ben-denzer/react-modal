@@ -30,7 +30,7 @@ class App extends React.Component<{}, IAppState> {
 
   openModal(e: React.MouseEvent<HTMLElement>): void {
     const { id } = e.target as HTMLElement;
-    if (id && id === 'customizedModal') {
+    if (id && id === 'demo-customizedModal') {
       this.setState({ customizedModal: true });
     }
     this.setState({ shouldShowModal: true });
@@ -38,6 +38,9 @@ class App extends React.Component<{}, IAppState> {
 
   render(): JSX.Element {
     const customStyle: ICustomModalStyle = {
+      modalBackground: {
+        backgroundColor: 'rgba(255, 165, 0, 0.8)'
+      },
       modalHeader: {
         backgroundColor: 'blue',
         color: 'white'
@@ -150,7 +153,7 @@ class App extends React.Component<{}, IAppState> {
             But you can easily customize just about everything about it. Here is
             an example of some of the things you could do.
           </p>
-          <button id="customizedModal" onClick={this.openModal}>
+          <button id="demo-customizedModal" onClick={this.openModal}>
             Open Customized Modal
           </button>
         </div>

@@ -52,7 +52,7 @@ ShallowWrapper {
             But you can easily customize just about everything about it. Here is an example of some of the things you could do.
           </p>
           <button
-            id="customizedModal"
+            id="demo-customizedModal"
             onClick={[Function]}
           >
             Open Customized Modal
@@ -117,7 +117,7 @@ ShallowWrapper {
               But you can easily customize just about everything about it. Here is an example of some of the things you could do.
             </p>,
             <button
-              id="customizedModal"
+              id="demo-customizedModal"
               onClick={[Function]}
             >
               Open Customized Modal
@@ -182,7 +182,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Open Customized Modal",
-              "id": "customizedModal",
+              "id": "demo-customizedModal",
               "onClick": [Function],
             },
             "ref": null,
@@ -236,7 +236,7 @@ ShallowWrapper {
               But you can easily customize just about everything about it. Here is an example of some of the things you could do.
             </p>
             <button
-              id="customizedModal"
+              id="demo-customizedModal"
               onClick={[Function]}
             >
               Open Customized Modal
@@ -301,7 +301,7 @@ ShallowWrapper {
                 But you can easily customize just about everything about it. Here is an example of some of the things you could do.
               </p>,
               <button
-                id="customizedModal"
+                id="demo-customizedModal"
                 onClick={[Function]}
               >
                 Open Customized Modal
@@ -366,7 +366,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Open Customized Modal",
-                "id": "customizedModal",
+                "id": "demo-customizedModal",
                 "onClick": [Function],
               },
               "ref": null,
