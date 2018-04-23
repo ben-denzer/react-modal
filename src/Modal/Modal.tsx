@@ -1,40 +1,34 @@
 import * as React from 'react';
-import {
-  closeButton,
-  modalAnimationTime,
-  modalBody,
-  modalBackground,
-  modalBackgroundOpen,
-  modalBackgroundTransition,
-  modalHeader,
-  modalInner
-} from './ModalStyles';
+import { ICustomModalStyle, IModalStyle, modalStyle } from './ModalStyles';
 
 interface IModalProps {
   shouldShowModal: boolean;
-  style?: React.CSSProperties;
+  customStyle?: ICustomModalStyle;
   title?: string;
   closeModal(): void;
 }
 
 interface IModalState {
+  modalAnimationTime: number;
   buttonIsHovered: boolean;
   modalClassName: '' | 'open' | 'transition';
 }
 
 class Modal extends React.Component<IModalProps, IModalState> {
   public static defaultProps: Partial<IModalProps> = {
-    style: {}
+    customStyle: {}
   };
   constructor(props: IModalProps) {
     super(props);
     this.state = {
+      modalAnimationTime: this.setAnimationTime(),
       buttonIsHovered: false,
       modalClassName: ''
     };
     this.buttonMouseOut = this.buttonMouseOut.bind(this);
     this.closeOnBgClick = this.closeOnBgClick.bind(this);
     this.mouseOverButton = this.mouseOverButton.bind(this);
+    this.setAnimationTime = this.setAnimationTime.bind(this);
     this.toggleModalClass = this.toggleModalClass.bind(this);
   }
 
@@ -57,31 +51,66 @@ class Modal extends React.Component<IModalProps, IModalState> {
     this.props.closeModal();
   }
 
-  calculateBgStyle(): React.CSSProperties {
+  calculateBgStyle(
+    modalBackground: React.CSSProperties,
+    modalBackgroundOpen: React.CSSProperties,
+    modalBackgroundTransition: React.CSSProperties
+  ): React.CSSProperties {
     const { modalClassName } = this.state;
     const styleMap = {
       open: modalBackgroundOpen,
       transition: modalBackgroundTransition
     };
-    const defaultOverrides = styleMap[modalClassName] || {};
-    return { ...modalBackground, ...defaultOverrides, ...this.props.style };
+    const currentState = styleMap[modalClassName] || {};
+    return { ...modalBackground, ...currentState };
   }
 
-  calculateButtonStyle(): React.CSSProperties {
+  calculateButtonStyle(
+    closeButton: React.CSSProperties,
+    closeButtonHover: React.CSSProperties,
+    closeButtonText: React.CSSProperties,
+    hoveredButtonText: React.CSSProperties
+  ): { button: React.CSSProperties; buttonText: React.CSSProperties } {
     const { buttonIsHovered } = this.state;
-    const hoverStyle: React.CSSProperties = {
-      cursor: 'pointer',
-      color: '#222'
-    };
-    return buttonIsHovered ? { ...closeButton, ...hoverStyle } : closeButton;
+    const button = buttonIsHovered
+      ? { ...closeButton, ...closeButtonHover }
+      : closeButton;
+    const buttonText = buttonIsHovered
+      ? { ...closeButtonText, ...hoveredButtonText }
+      : closeButtonText;
+    return { button, buttonText };
+  }
+
+  mergeStyles(): IModalStyle {
+    const custom = this.props.customStyle as ICustomModalStyle;
+    const merged = { ...modalStyle };
+    for (const i in custom) {
+      if (custom.hasOwnProperty(i)) {
+        merged[i] = { ...merged[i], ...custom[i] };
+      }
+    }
+
+    // set animation time
+    merged.modalBackground.transitionDuration = `${this.state
+      .modalAnimationTime / 1000}s`;
+    return merged;
   }
 
   mouseOverButton(): void {
     this.setState({ buttonIsHovered: true });
   }
 
+  setAnimationTime(): number {
+    const { customStyle } = this.props;
+    if (customStyle && customStyle.animationTime) {
+      return customStyle.animationTime;
+    }
+    return modalStyle.animationTime;
+  }
+
   toggleModalClass(shouldShowModal: boolean): void {
     this.setState({ modalClassName: 'transition' });
+    const { modalAnimationTime } = this.state;
     const minUpdateTime = 17;
     const nextClass = shouldShowModal ? 'open' : '';
     const timer: number = shouldShowModal ? minUpdateTime : modalAnimationTime;
@@ -89,23 +118,49 @@ class Modal extends React.Component<IModalProps, IModalState> {
   }
 
   render(): JSX.Element {
+    const mergedStyles = this.mergeStyles();
+    const {
+      closeButton,
+      closeButtonText,
+      closeButtonHover,
+      hoveredButtonText,
+      modalBackground,
+      modalBackgroundTransition,
+      modalBackgroundOpen,
+      modalBody,
+      modalHeader,
+      modalInner,
+      modalTitle
+    } = mergedStyles;
+    const bgStyle = this.calculateBgStyle(
+      modalBackground,
+      modalBackgroundOpen,
+      modalBackgroundTransition
+    );
+    const { button, buttonText } = this.calculateButtonStyle(
+      closeButton,
+      closeButtonHover,
+      closeButtonText,
+      hoveredButtonText
+    );
+
     return (
-      <div
-        style={this.calculateBgStyle()}
-        id="modal-modalBg"
-        onClick={this.closeOnBgClick}
-      >
+      <div style={bgStyle} id="modal-modalBg" onClick={this.closeOnBgClick}>
         <div id="modal-modalInner" style={modalInner}>
           <div id="modal-modalHeader" style={modalHeader}>
-            <div id="modal-modalTitle">{this.props.title}</div>
+            <div id="modal-modalTitle" style={modalTitle}>
+              {this.props.title}
+            </div>
             <div
               id="modal-closeButton"
               onClick={this.props.closeModal}
               onMouseOut={this.buttonMouseOut}
               onMouseOver={this.mouseOverButton}
-              style={this.calculateButtonStyle()}
+              style={button}
             >
-              X
+              <span style={buttonText} id="modal-closeButtonText">
+                X
+              </span>
             </div>
           </div>
           <div id="modal-modalBody" style={modalBody}>
@@ -117,4 +172,5 @@ class Modal extends React.Component<IModalProps, IModalState> {
   }
 }
 
+export { ICustomModalStyle };
 export default Modal;

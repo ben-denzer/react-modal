@@ -1,0 +1,632 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Modal
+    closeModal={[MockFunction]}
+    customStyle={Object {}}
+    shouldShowModal={true}
+    title="My Title"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        id="modal-modalInner"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": "2px",
+            "display": "flex",
+            "flexDirection": "column",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "margin": "0 auto 100px",
+            "maxWidth": "700px",
+            "minHeight": "200px",
+            "width": "98%",
+          }
+        }
+      >
+        <div
+          id="modal-modalHeader"
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottom": "1px solid #ccc",
+              "display": "flex",
+              "fontSize": "18px",
+              "fontWeight": "bold",
+              "justifyContent": "space-between",
+              "minHeight": "50px",
+              "paddingLeft": "20px",
+            }
+          }
+        >
+          <div
+            id="modal-modalTitle"
+            style={Object {}}
+          >
+            My Title
+          </div>
+          <div
+            id="modal-closeButton"
+            onClick={[MockFunction]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "#999",
+                "display": "flex",
+                "fontWeight": "normal",
+                "height": "50px",
+                "justifyContent": "center",
+                "width": "50px",
+              }
+            }
+          >
+            <span
+              id="modal-closeButtonText"
+              style={Object {}}
+            >
+              X
+            </span>
+          </div>
+        </div>
+        <div
+          id="modal-modalBody"
+          style={
+            Object {
+              "flexGrow": 1,
+              "padding": "10px 20px",
+            }
+          }
+        />
+      </div>,
+      "id": "modal-modalBg",
+      "onClick": [Function],
+      "style": Object {
+        "backgroundColor": "rgba(0, 0, 0, 0.4)",
+        "display": "none",
+        "height": "100vh",
+        "left": "0",
+        "overflow": "auto",
+        "position": "fixed",
+        "top": "0",
+        "transitionDuration": "0.3s",
+        "transitionProperty": "all",
+        "transitionTimingFunction": "ease-in-out",
+        "width": "100vw",
+        "zIndex": 9999,
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            id="modal-modalHeader"
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottom": "1px solid #ccc",
+                "display": "flex",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "justifyContent": "space-between",
+                "minHeight": "50px",
+                "paddingLeft": "20px",
+              }
+            }
+          >
+            <div
+              id="modal-modalTitle"
+              style={Object {}}
+            >
+              My Title
+            </div>
+            <div
+              id="modal-closeButton"
+              onClick={[MockFunction]}
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "color": "#999",
+                  "display": "flex",
+                  "fontWeight": "normal",
+                  "height": "50px",
+                  "justifyContent": "center",
+                  "width": "50px",
+                }
+              }
+            >
+              <span
+                id="modal-closeButtonText"
+                style={Object {}}
+              >
+                X
+              </span>
+            </div>
+          </div>,
+          <div
+            id="modal-modalBody"
+            style={
+              Object {
+                "flexGrow": 1,
+                "padding": "10px 20px",
+              }
+            }
+          />,
+        ],
+        "id": "modal-modalInner",
+        "style": Object {
+          "backgroundColor": "white",
+          "borderRadius": "2px",
+          "display": "flex",
+          "flexDirection": "column",
+          "fontFamily": "Arial, Helvetica, sans-serif",
+          "margin": "0 auto 100px",
+          "maxWidth": "700px",
+          "minHeight": "200px",
+          "width": "98%",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                id="modal-modalTitle"
+                style={Object {}}
+              >
+                My Title
+              </div>,
+              <div
+                id="modal-closeButton"
+                onClick={[MockFunction]}
+                onMouseOut={[Function]}
+                onMouseOver={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "color": "#999",
+                    "display": "flex",
+                    "fontWeight": "normal",
+                    "height": "50px",
+                    "justifyContent": "center",
+                    "width": "50px",
+                  }
+                }
+              >
+                <span
+                  id="modal-closeButtonText"
+                  style={Object {}}
+                >
+                  X
+                </span>
+              </div>,
+            ],
+            "id": "modal-modalHeader",
+            "style": Object {
+              "alignItems": "center",
+              "borderBottom": "1px solid #ccc",
+              "display": "flex",
+              "fontSize": "18px",
+              "fontWeight": "bold",
+              "justifyContent": "space-between",
+              "minHeight": "50px",
+              "paddingLeft": "20px",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "My Title",
+                "id": "modal-modalTitle",
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": "My Title",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span
+                  id="modal-closeButtonText"
+                  style={Object {}}
+                >
+                  X
+                </span>,
+                "id": "modal-closeButton",
+                "onClick": [MockFunction],
+                "onMouseOut": [Function],
+                "onMouseOver": [Function],
+                "style": Object {
+                  "alignItems": "center",
+                  "color": "#999",
+                  "display": "flex",
+                  "fontWeight": "normal",
+                  "height": "50px",
+                  "justifyContent": "center",
+                  "width": "50px",
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "X",
+                  "id": "modal-closeButtonText",
+                  "style": Object {},
+                },
+                "ref": null,
+                "rendered": "X",
+                "type": "span",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "id": "modal-modalBody",
+            "style": Object {
+              "flexGrow": 1,
+              "padding": "10px 20px",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          id="modal-modalInner"
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": "2px",
+              "display": "flex",
+              "flexDirection": "column",
+              "fontFamily": "Arial, Helvetica, sans-serif",
+              "margin": "0 auto 100px",
+              "maxWidth": "700px",
+              "minHeight": "200px",
+              "width": "98%",
+            }
+          }
+        >
+          <div
+            id="modal-modalHeader"
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottom": "1px solid #ccc",
+                "display": "flex",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "justifyContent": "space-between",
+                "minHeight": "50px",
+                "paddingLeft": "20px",
+              }
+            }
+          >
+            <div
+              id="modal-modalTitle"
+              style={Object {}}
+            >
+              My Title
+            </div>
+            <div
+              id="modal-closeButton"
+              onClick={[MockFunction]}
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "color": "#999",
+                  "display": "flex",
+                  "fontWeight": "normal",
+                  "height": "50px",
+                  "justifyContent": "center",
+                  "width": "50px",
+                }
+              }
+            >
+              <span
+                id="modal-closeButtonText"
+                style={Object {}}
+              >
+                X
+              </span>
+            </div>
+          </div>
+          <div
+            id="modal-modalBody"
+            style={
+              Object {
+                "flexGrow": 1,
+                "padding": "10px 20px",
+              }
+            }
+          />
+        </div>,
+        "id": "modal-modalBg",
+        "onClick": [Function],
+        "style": Object {
+          "backgroundColor": "rgba(0, 0, 0, 0.4)",
+          "display": "none",
+          "height": "100vh",
+          "left": "0",
+          "overflow": "auto",
+          "position": "fixed",
+          "top": "0",
+          "transitionDuration": "0.3s",
+          "transitionProperty": "all",
+          "transitionTimingFunction": "ease-in-out",
+          "width": "100vw",
+          "zIndex": 9999,
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              id="modal-modalHeader"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderBottom": "1px solid #ccc",
+                  "display": "flex",
+                  "fontSize": "18px",
+                  "fontWeight": "bold",
+                  "justifyContent": "space-between",
+                  "minHeight": "50px",
+                  "paddingLeft": "20px",
+                }
+              }
+            >
+              <div
+                id="modal-modalTitle"
+                style={Object {}}
+              >
+                My Title
+              </div>
+              <div
+                id="modal-closeButton"
+                onClick={[MockFunction]}
+                onMouseOut={[Function]}
+                onMouseOver={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "color": "#999",
+                    "display": "flex",
+                    "fontWeight": "normal",
+                    "height": "50px",
+                    "justifyContent": "center",
+                    "width": "50px",
+                  }
+                }
+              >
+                <span
+                  id="modal-closeButtonText"
+                  style={Object {}}
+                >
+                  X
+                </span>
+              </div>
+            </div>,
+            <div
+              id="modal-modalBody"
+              style={
+                Object {
+                  "flexGrow": 1,
+                  "padding": "10px 20px",
+                }
+              }
+            />,
+          ],
+          "id": "modal-modalInner",
+          "style": Object {
+            "backgroundColor": "white",
+            "borderRadius": "2px",
+            "display": "flex",
+            "flexDirection": "column",
+            "fontFamily": "Arial, Helvetica, sans-serif",
+            "margin": "0 auto 100px",
+            "maxWidth": "700px",
+            "minHeight": "200px",
+            "width": "98%",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  id="modal-modalTitle"
+                  style={Object {}}
+                >
+                  My Title
+                </div>,
+                <div
+                  id="modal-closeButton"
+                  onClick={[MockFunction]}
+                  onMouseOut={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "color": "#999",
+                      "display": "flex",
+                      "fontWeight": "normal",
+                      "height": "50px",
+                      "justifyContent": "center",
+                      "width": "50px",
+                    }
+                  }
+                >
+                  <span
+                    id="modal-closeButtonText"
+                    style={Object {}}
+                  >
+                    X
+                  </span>
+                </div>,
+              ],
+              "id": "modal-modalHeader",
+              "style": Object {
+                "alignItems": "center",
+                "borderBottom": "1px solid #ccc",
+                "display": "flex",
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "justifyContent": "space-between",
+                "minHeight": "50px",
+                "paddingLeft": "20px",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "My Title",
+                  "id": "modal-modalTitle",
+                  "style": Object {},
+                },
+                "ref": null,
+                "rendered": "My Title",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span
+                    id="modal-closeButtonText"
+                    style={Object {}}
+                  >
+                    X
+                  </span>,
+                  "id": "modal-closeButton",
+                  "onClick": [MockFunction],
+                  "onMouseOut": [Function],
+                  "onMouseOver": [Function],
+                  "style": Object {
+                    "alignItems": "center",
+                    "color": "#999",
+                    "display": "flex",
+                    "fontWeight": "normal",
+                    "height": "50px",
+                    "justifyContent": "center",
+                    "width": "50px",
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "X",
+                    "id": "modal-closeButtonText",
+                    "style": Object {},
+                  },
+                  "ref": null,
+                  "rendered": "X",
+                  "type": "span",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "id": "modal-modalBody",
+              "style": Object {
+                "flexGrow": 1,
+                "padding": "10px 20px",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -45,4 +45,11 @@ describe('Modal', () => {
     wrapper.find('#modal-modalBg').simulate('click');
     expect(closeModal).toHaveBeenCalledTimes(1);
   });
+
+  it('should match snapshot', () => {
+    const wrapper = shallow(
+      <Modal closeModal={closeModal} shouldShowModal={true} title="My Title" />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });
