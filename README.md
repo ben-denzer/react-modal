@@ -14,7 +14,7 @@
 * title: string
 * customStyle - object containing JS style objects - see 'Adding Custom Styles' Demo below
 
-### Example: Simple Usage In JS
+### Example: Simple Usage In JS [TypeScript Example Here](https://github.com/ben-denzer/react-modal#example---adding-custom-styles-in-typescript)
 
 ```
   import React, { Component } from 'react';
@@ -50,50 +50,6 @@
           <button onClick={this.openModal}>Open Modal</button>
         </div>
       );
-    }
-  }
-```
-
-### Example: Simple Usage in TypeScript
-
-```
-  import * as React from 'react';
-  import Modal from '@bdenzer/react-modal';
-
-  interface IAppState {
-    shouldShowModal: true;
-  }
-
-  export default Class App extends React.Component<{}, IAppState> {
-    constructor(props: {}) {
-      super(props);
-      this.state = {
-        shouldShowModal: false
-      }
-      this.closeModal = this.closeModal.bind(this);
-      this.openModal = this.openModal.bind(this);
-    }
-
-    public render(): JSX.Element {
-      return (
-        <div>
-          <Modal
-            closeModal={this.closeModal}
-            shouldShowModal={this.state.shouldShowModal}
-          >
-            This is some text inside the modal
-          </Modal>
-          <button onClick={this.openModal}>Open Modal</button>
-        </div>
-      );
-    }
-
-    private closeModal(): void {
-      this.setState({ shouldShowModal: false });
-    }
-
-    private openModal(): void {
-      this.setState({ shouldShowModal: true });
     }
   }
 ```
@@ -176,6 +132,8 @@ Here is a full list of the style options
 
 ### Example - Adding Custom Styles in TypeScript
 
+**Import `{ ICustomModalStyle }` to make your life easier**
+
 ```
   import * as React from 'react';
   import Modal, { ICustomModalStyle } from '@bdenzer/react-modal';
@@ -236,4 +194,4 @@ Here is a full list of the style options
 
 **yarn test:watch throws ENOSPC error on Linux**
 
-This issue is that you have to increase the number of 'watchers' on your system. Run `echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p` to fix. (From [this issue](https://github.com/facebook/jest/issues/3254) in the Jest repository.)
+If you run into this issue, you'll need to increase the number of 'watchers' on your system. Run `echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p` to fix. (From [this issue](https://github.com/facebook/jest/issues/3254) in the Jest repository.)
