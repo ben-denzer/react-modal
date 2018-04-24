@@ -14,7 +14,7 @@
 * title: string
 * customStyle - object containing JS style objects - see 'Adding Custom Styles' Demo below
 
-### Example: Simple Usage In JS [TypeScript Example Here](https://github.com/ben-denzer/react-modal#example---adding-custom-styles-in-typescript)
+### Example: Simple Usage In JS - ( [TypeScript Example Here](https://github.com/ben-denzer/react-modal#example---adding-custom-styles-in-typescript) )
 
 ```
   import React, { Component } from 'react';
