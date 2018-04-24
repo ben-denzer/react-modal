@@ -2,7 +2,7 @@
 yarn-error.log
 
 demo/
-dist/
+demo-dist/
 src/
 node_modules/
 
