@@ -6,6 +6,8 @@ dist/
 src/
 node_modules/
 
+__mocks__/
+setupTests.js
 tsconfig.json
 tslint.json
 yarn.lock

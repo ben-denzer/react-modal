@@ -42,7 +42,7 @@ describe('Modal', () => {
     const wrapper = mount(
       <Modal closeModal={closeModal} shouldShowModal={true} />
     );
-    wrapper.find('#modal-modalBg').simulate('click');
+    wrapper.find('#modal-modalBackground').simulate('click');
     expect(closeModal).toHaveBeenCalledTimes(1);
   });
 

@@ -25,15 +25,13 @@ class App extends React.Component<{}, IAppState> {
   }
 
   closeModal(): void {
-    this.setState({ shouldShowModal: false, customizedModal: false });
+    this.setState({ shouldShowModal: false });
   }
 
   openModal(e: React.MouseEvent<HTMLElement>): void {
     const { id } = e.target as HTMLElement;
-    if (id && id === 'demo-customizedModal') {
-      this.setState({ customizedModal: true });
-    }
-    this.setState({ shouldShowModal: true });
+    const customizedModal = id === 'demo-customizedModal';
+    this.setState({ customizedModal, shouldShowModal: true });
   }
 
   render(): JSX.Element {
@@ -57,7 +55,7 @@ class App extends React.Component<{}, IAppState> {
         transition: 'all 1s ease'
       },
       hoveredButtonText: {
-        transform: 'rotate(0.9turn)'
+        transform: 'rotate(1turn)'
       },
       modalBody: {
         backgroundImage: `url(${bgImage})`,
@@ -137,8 +135,7 @@ class App extends React.Component<{}, IAppState> {
                 dictionary of over 200 Latin words, combined with a handful of
                 model sentence structures, to generate Lorem Ipsum which looks
                 reasonable. The generated Lorem Ipsum is therefore always free
-                from repetition, injected humour, or non-characteristic words
-                etc.
+                from repetition, injected humour, or non-characteristic words.
               </p>
             </React.Fragment>
           )}

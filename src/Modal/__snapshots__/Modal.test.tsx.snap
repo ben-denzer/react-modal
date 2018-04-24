@@ -31,7 +31,7 @@ ShallowWrapper {
             "display": "flex",
             "flexDirection": "column",
             "fontFamily": "Arial, Helvetica, sans-serif",
-            "margin": "0 auto 100px",
+            "margin": "0 auto 200px",
             "maxWidth": "700px",
             "minHeight": "200px",
             "width": "98%",
@@ -94,7 +94,7 @@ ShallowWrapper {
           }
         />
       </div>,
-      "id": "modal-modalBg",
+      "id": "modal-modalBackground",
       "onClick": [Function],
       "style": Object {
         "backgroundColor": "rgba(0, 0, 0, 0.4)",
@@ -181,7 +181,7 @@ ShallowWrapper {
           "display": "flex",
           "flexDirection": "column",
           "fontFamily": "Arial, Helvetica, sans-serif",
-          "margin": "0 auto 100px",
+          "margin": "0 auto 200px",
           "maxWidth": "700px",
           "minHeight": "200px",
           "width": "98%",
@@ -333,7 +333,7 @@ ShallowWrapper {
               "display": "flex",
               "flexDirection": "column",
               "fontFamily": "Arial, Helvetica, sans-serif",
-              "margin": "0 auto 100px",
+              "margin": "0 auto 200px",
               "maxWidth": "700px",
               "minHeight": "200px",
               "width": "98%",
@@ -396,7 +396,7 @@ ShallowWrapper {
             }
           />
         </div>,
-        "id": "modal-modalBg",
+        "id": "modal-modalBackground",
         "onClick": [Function],
         "style": Object {
           "backgroundColor": "rgba(0, 0, 0, 0.4)",
@@ -483,7 +483,7 @@ ShallowWrapper {
             "display": "flex",
             "flexDirection": "column",
             "fontFamily": "Arial, Helvetica, sans-serif",
-            "margin": "0 auto 100px",
+            "margin": "0 auto 200px",
             "maxWidth": "700px",
             "minHeight": "200px",
             "width": "98%",

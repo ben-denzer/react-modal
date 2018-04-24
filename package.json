@@ -1,6 +1,6 @@
 {
   "name": "@bdenzer/react-modal",
-  "version": "0.5.0",
+  "version": "0.5.3",
   "description":
     "Simple modal component for React. Styled to look like Bootstrap's modal",
   "main": "./lib/Modal.js",

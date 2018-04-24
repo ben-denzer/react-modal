@@ -45,7 +45,7 @@ class Modal extends React.Component<IModalProps, IModalState> {
 
   closeOnBgClick(e: React.MouseEvent<HTMLElement>): void {
     const { id } = e.target as HTMLElement;
-    if (!id || id !== 'modal-modalBg') {
+    if (!id || id !== 'modal-modalBackground') {
       return;
     }
     this.props.closeModal();
@@ -145,7 +145,11 @@ class Modal extends React.Component<IModalProps, IModalState> {
     );
 
     return (
-      <div style={bgStyle} id="modal-modalBg" onClick={this.closeOnBgClick}>
+      <div
+        style={bgStyle}
+        id="modal-modalBackground"
+        onClick={this.closeOnBgClick}
+      >
         <div id="modal-modalInner" style={modalInner}>
           <div id="modal-modalHeader" style={modalHeader}>
             <div id="modal-modalTitle" style={modalTitle}>

@@ -9,12 +9,12 @@ describe('App', () => {
 
   it('should open modal on "default modal" button click, and should not have custom styling', () => {
     const wrapper = mount(<App />);
-    expect(wrapper.find('#modal-modalBg').prop('style')).toHaveProperty(
+    expect(wrapper.find('#modal-modalBackground').prop('style')).toHaveProperty(
       'display',
       'none'
     );
     wrapper.find('#demo-button').simulate('click'); // open modal
-    expect(wrapper.find('#modal-modalBg').prop('style')).toHaveProperty(
+    expect(wrapper.find('#modal-modalBackground').prop('style')).toHaveProperty(
       'display',
       'block'
     );
@@ -26,12 +26,12 @@ describe('App', () => {
 
   it('should open modal on "customized modal" button click and have custom styling', () => {
     const wrapper = mount(<App />);
-    expect(wrapper.find('#modal-modalBg').prop('style')).toHaveProperty(
+    expect(wrapper.find('#modal-modalBackground').prop('style')).toHaveProperty(
       'display',
       'none'
     );
     wrapper.find('#demo-customizedModal').simulate('click'); // open modal
-    expect(wrapper.find('#modal-modalBg').prop('style')).toHaveProperty(
+    expect(wrapper.find('#modal-modalBackground').prop('style')).toHaveProperty(
       'display',
       'block'
     );

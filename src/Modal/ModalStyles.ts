@@ -71,7 +71,8 @@ export const modalStyle: IModalStyle = {
   modalBackgroundOpen: {
     display: 'block',
     opacity: 1,
-    paddingTop: '45px'
+    paddingTop: '45px',
+    marginBottom: '45px'
   },
 
   modalBackgroundTransition: {
@@ -97,7 +98,7 @@ export const modalStyle: IModalStyle = {
   },
 
   modalInner: {
-    margin: '0 auto 100px',
+    margin: '0 auto 200px',
     width: '98%',
     display: 'flex',
     flexDirection: 'column',
