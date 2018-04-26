@@ -67,19 +67,19 @@ Every element in the modal has it's own `id` so you can use Styled Components, E
 <!-- prettier-ignore-start -->
 Here is a full list of the style options
 
-| customStyle prop          |              CSS ID                 |                  Description               |
+| customStyle prop          | CSS ID                              | Description                                |
 | ------------------------- | ----------------------------------- | ------------------------------------------ |
-| animationTime: number     | should be set in `customStyle` prop | setting it via CSS will be a headache      |
+| animationTime: **number** | should be set in `customStyle` prop | setting it via CSS will be a headache      |
 | closeButton               | #modal-closeButton                  | square box in top right corner             |
 | closeButtonHover          | #modal-closeButton:hover            | hovered state of the close button          |
 | closeButtonText           | #modal-closeButtonText              | the 'X' inside the close button            |
-| hoveredButtonText         | #modal-closeButton:hover #modal-closeButtonText | style the 'X' while the outer button is hovered |
+| hoveredButtonText         | #modal-closeButton:hover #modal-closeButtonText | style of the 'X' while the outer button is hovered |
 | modalBackground           | #modal-modalBackground              | the outer, semi-transparent section with no content |
 | modalBackgroundOpen       | #modal-modalBackground.open         | final position of _open_ animation         |
 | modalBackgroundTransition | #modal-modalBackground.transition   | starting point of _open_ animation         |
 | modalBody                 | #modal-modalBody                    | _under_ the modalHeader                    |
 | modalHeader               | #modal-modalHeader                  | top row, the title and closeButton         |
-| modalInner                | #modal-modalInner                   | modalHeader + modalBody (everything that is not modalBackground |
+| modalInner                | #modal-modalInner                   | modalHeader + modalBody (everything that is not modalBackground) |
 | modalTitle                | #modal-modalTitle                   | text in the top left of the modal          |
 <!-- prettier-ignore-end -->
 
