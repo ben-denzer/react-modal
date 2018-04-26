@@ -104,7 +104,7 @@ Here is a full list of the style options
         },
         modalTitle: {
           color: 'white'
-        }
+        },
         closeButtonText: {
           color: 'white'
         },
@@ -159,7 +159,7 @@ Here is a full list of the style options
         },
         modalTitle: {
           color: 'white'
-        }
+        },
         closeButtonText: {
           color: 'white'
         },
