@@ -66,6 +66,7 @@ Every element in the modal has it's own `id` so you can use Styled Components, E
 
 <!-- prettier-ignore-start -->
 Here is a full list of the style options
+
 | customStyle prop          |              CSS ID                 |                  Description               |
 | ------------------------- | ----------------------------------- | ------------------------------------------ |
 | animationTime: number     | should be set in `customStyle` prop | setting it via CSS will be a headache      |
