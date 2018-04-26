@@ -21,6 +21,7 @@ declare module '@bdenzer/react-modal' {
   interface IModalProps {
     shouldShowModal: boolean;
     customStyle?: ICustomModalStyle;
+    onlyCloseWithButton?: boolean;
     title?: string;
     closeModal(): void;
   }

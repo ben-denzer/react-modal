@@ -38,12 +38,24 @@ describe('Modal', () => {
     expect(closeModal).toHaveBeenCalledTimes(1);
   });
 
-  it('should call closeModal if background is clicked', () => {
+  it('should call closeModal if background is clicked and !onlyCloseWithButton', () => {
     const wrapper = mount(
       <Modal closeModal={closeModal} shouldShowModal={true} />
     );
     wrapper.find('#modal-modalBackground').simulate('click');
     expect(closeModal).toHaveBeenCalledTimes(1);
+  });
+
+  it('should not close the modal if onlyCloseWithButton prop is true', () => {
+    const wrapper = mount(
+      <Modal
+        closeModal={closeModal}
+        shouldShowModal={true}
+        onlyCloseWithButton={true}
+      />
+    );
+    wrapper.find('#modal-modalBackground').simulate('click');
+    expect(closeModal).toHaveBeenCalledTimes(0);
   });
 
   it('should match snapshot', () => {

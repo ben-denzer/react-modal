@@ -4,6 +4,7 @@ import { ICustomModalStyle, IModalStyle, modalStyle } from './ModalStyles';
 interface IModalProps {
   shouldShowModal: boolean;
   customStyle?: ICustomModalStyle;
+  onlyCloseWithButton?: boolean;
   title?: string;
   closeModal(): void;
 }
@@ -44,8 +45,9 @@ class Modal extends React.Component<IModalProps, IModalState> {
   }
 
   closeOnBgClick(e: React.MouseEvent<HTMLElement>): void {
+    const { onlyCloseWithButton } = this.props;
     const { id } = e.target as HTMLElement;
-    if (!id || id !== 'modal-modalBackground') {
+    if (onlyCloseWithButton || !id || id !== 'modal-modalBackground') {
       return;
     }
     this.props.closeModal();
@@ -102,8 +104,10 @@ class Modal extends React.Component<IModalProps, IModalState> {
 
   setAnimationTime(): number {
     const { customStyle } = this.props;
-    if (customStyle && customStyle.animationTime) {
-      return customStyle.animationTime;
+    if (customStyle) {
+      if (customStyle.animationTime === 0 || customStyle.animationTime) {
+        return customStyle.animationTime;
+      }
     }
     return modalStyle.animationTime;
   }
