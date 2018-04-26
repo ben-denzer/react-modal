@@ -1,18 +1,23 @@
 {
   "name": "@bdenzer/react-modal",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description":
     "Simple modal component for React. Styled to look like Bootstrap's modal",
-  "main": "./lib/Modal.js",
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "start": "parcel ./demo/index.html -p 3000",
-    "build": "tsc ./src/Modal/Modal.tsx --outDir ./lib --jsx react",
-    "build-demo": "parcel build ./demo/index.html",
-    "prepublish": "yarn build"
+  "author": {
+    "name": "Ben Denzer",
+    "url": "https://bdenzer.com"
   },
-  "author": "Ben Denzer",
+  "main": "./lib/Modal.js",
+  "private": false,
+  "keywords": ["react", "modal", "typescript"],
+  "homepage": "https://react-modal.bdenzer.com",
+  "bugs": {
+    "url": "https://github.com/ben-denzer/react-modal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ben-denzer/react-modal"
+  },
   "license": "MIT",
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
@@ -27,6 +32,14 @@
         "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "start": "parcel ./demo/index.html -p 3000",
+    "build": "tsc ./src/Modal/Modal.tsx --outDir ./lib --jsx react",
+    "build-demo": "parcel build ./demo/index.html",
+    "prepublish": "yarn build"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.10",
