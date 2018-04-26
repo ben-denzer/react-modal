@@ -14,7 +14,13 @@
 * title: string
 * customStyle - object containing JS style objects - see 'Adding Custom Styles' Demo below
 
-### Example: Simple Usage In JS - ( [TypeScript Example Here](https://github.com/ben-denzer/react-modal#example---adding-custom-styles-in-typescript) )
+### Installation
+
+`yarn add @bdenzer/react-modal`\
+or\
+`npm install @bdenzer/react-modal --save`
+
+### Minimal Example ---- ( [TypeScript Example Here](https://github.com/ben-denzer/react-modal#example---adding-custom-styles-in-typescript) )
 
 ```
   import React, { Component } from 'react';
@@ -58,20 +64,23 @@
 
 Every element in the modal has it's own `id` so you can use Styled Components, Emotion, SCSS, LESS, CSS... Or you can set the `customStyle` prop with a JS style object (<React.CSSProperties> in TypeScript).
 
+<!-- prettier-ignore-start -->
 Here is a full list of the style options
-
-* animationTime: number - should be set in `customStyle` prop, setting it via CSS will be a headache
-* closeButton (#modal-closeButton)
-* closeButtonHover (#modal-closeButton:hover)
-* closeButtonText (#modal-closeButtonText)
-* hoveredButtonText (#modal-closeButton:hover #modal-closeButtonText)
-* modalBackground (#modal-modalBackground)
-* modalBackgroundOpen (#modal-modalBackground.open) - Final position of _open_ animation
-* modalBackgroundTransition (#modal-modalBackground.transition) - Starting point of _open_ animation
-* modalBody (#modal-modalBody) - the part of the modal _under_ the modalHeader
-* modalHeader (#modal-modalHeader)
-* modalInner (#modal-modalInner) - The whole modal wrapping modalHeader and modalBody
-* modalTitle (#modal-modalTitle)
+| customStyle prop          |              CSS ID                 |                  Description               |
+| ------------------------- | ----------------------------------- | ------------------------------------------ |
+| animationTime: number     | should be set in `customStyle` prop | setting it via CSS will be a headache      |
+| closeButton               | #modal-closeButton                  | square box in top right corner             |
+| closeButtonHover          | #modal-closeButton:hover            | hovered state of the close button          |
+| closeButtonText           | #modal-closeButtonText              | the 'X' inside the close button            |
+| hoveredButtonText         | #modal-closeButton:hover #modal-closeButtonText | style the 'X' while the outer button is hovered |
+| modalBackground           | #modal-modalBackground              | the outer, semi-transparent section with no content |
+| modalBackgroundOpen       | #modal-modalBackground.open         | final position of _open_ animation         |
+| modalBackgroundTransition | #modal-modalBackground.transition   | starting point of _open_ animation         |
+| modalBody                 | #modal-modalBody                    | _under_ the modalHeader                    |
+| modalHeader               | #modal-modalHeader                  | top row, the title and closeButton         |
+| modalInner                | #modal-modalInner                   | modalHeader + modalBody (everything that is not modalBackground |
+| modalTitle                | #modal-modalTitle                   | text in the top left of the modal          |
+<!-- prettier-ignore-end -->
 
 ### Example - Adding Custom Styles in JS
 
@@ -136,10 +145,11 @@ Here is a full list of the style options
 
 ```
   import * as React from 'react';
+
   import Modal, { ICustomModalStyle } from '@bdenzer/react-modal';
 
   interface IAppState {
-    shouldShowModal: true;
+    shouldShowModal: boolean;
   }
 
   export default class App extends React.Component<{}, IAppState> {
@@ -154,24 +164,26 @@ Here is a full list of the style options
 
     public render(): JSX.Element {
       const modalStyle: ICustomModalStyle = {
-        modalHeader: {
-          backgroundColor: 'green'
-        },
-        modalTitle: {
-          color: 'white'
-        },
         closeButtonText: {
           color: 'white'
         },
         hoveredButtonText: {
           fontWeight: 'bold'
+        },
+        modalHeader: {
+          backgroundColor: 'green'
+        },
+        modalTitle: {
+          color: 'white'
         }
       };
       return (
         <div>
           <Modal
             closeModal={this.closeModal}
+            customStyle={modalStyle}
             shouldShowModal={this.state.shouldShowModal}
+            title="React Modal in TypeScript"
           >
             This is some text inside the modal
           </Modal>
