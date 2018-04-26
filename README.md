@@ -20,7 +20,7 @@
   import React, { Component } from 'react';
   import Modal from '@bdenzer/react-modal';
 
-  export default Class App extends Component {
+  export default class App extends Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -79,7 +79,7 @@ Here is a full list of the style options
   import React, { Component } from 'react';
   import Modal from '@bdenzer/react-modal';
 
-  export default Class App extends Component {
+  export default class App extends Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -142,7 +142,7 @@ Here is a full list of the style options
     shouldShowModal: true;
   }
 
-  export default Class App extends React.Component<{}, IAppState> {
+  export default class App extends React.Component<{}, IAppState> {
     constructor(props: {}) {
       super(props);
       this.state = {
