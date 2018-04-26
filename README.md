@@ -10,9 +10,9 @@
 or\
 `npm install @bdenzer/react-modal --save`
 
-### Getting Started
+### [See The Demo Here](https://react-modal.bdenzer.com)
 
-**[See The Demo Here](https://react-modal.bdenzer.com)**
+### Getting Started
 
 It is best practice to put a modal component at the 'top level'. In React 16.2+ this is even easier using `React.Fragment`. This advice is not specific to a particular component - nesting a modal inside an element that has it's CSS `position` set will cause it to render in the wrong place.
 
