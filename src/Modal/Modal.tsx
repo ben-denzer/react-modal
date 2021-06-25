@@ -31,12 +31,25 @@ class Modal extends React.Component<IModalProps, IModalState> {
     this.mouseOverButton = this.mouseOverButton.bind(this);
     this.setAnimationTime = this.setAnimationTime.bind(this);
     this.toggleModalClass = this.toggleModalClass.bind(this);
+    this.handleEscKey = this.handleEscKey.bind(this);
   }
 
   componentDidUpdate(prevProps: IModalProps): void {
     const nextModalState: boolean = this.props.shouldShowModal;
     if (prevProps.shouldShowModal !== nextModalState) {
+      if (this.props.shouldShowModal) {
+        window.addEventListener('keydown', this.handleEscKey);
+      } else {
+        window.removeEventListener('keydown', this.handleEscKey);
+      }
       this.toggleModalClass(nextModalState);
+    }
+  }
+
+  handleEscKey(e: KeyboardEvent): void {
+    console.log(e.key);
+    if (e?.key.toLowerCase() === 'escape' || e?.key.toLowerCase() === 'esc') {
+      this.props.closeModal();
     }
   }
 

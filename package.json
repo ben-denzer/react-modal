@@ -1,15 +1,18 @@
 {
   "name": "@bdenzer/react-modal",
-  "version": "0.6.2",
-  "description":
-    "Simple modal component for React. Styled to look like Bootstrap's modal",
+  "version": "1.0.0",
+  "description": "Simple modal component for React. Styled to look like Bootstrap's modal",
   "author": {
     "name": "Ben Denzer",
     "url": "https://bdenzer.com"
   },
   "main": "./lib/Modal.js",
   "private": false,
-  "keywords": ["react", "modal", "typescript"],
+  "keywords": [
+    "react",
+    "modal",
+    "typescript"
+  ],
   "homepage": "https://react-modal.bdenzer.com",
   "bugs": {
     "url": "https://github.com/ben-denzer/react-modal/issues"
@@ -25,11 +28,16 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": ".test.tsx?$",
-    "moduleFileExtensions": ["ts", "tsx", "js"],
-    "modulePathIgnorePatterns": ["node_modules"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "modulePathIgnorePatterns": [
+      "node_modules"
+    ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
   },
@@ -39,21 +47,22 @@
     "start": "parcel ./demo/index.html -p 3000",
     "build": "tsc ./src/Modal/Modal.tsx --outDir ./lib --jsx react",
     "build-demo": "parcel build ./demo/index.html",
-    "prepublish": "yarn build"
+    "prepublish": "yarn build",
+    "reinstall": "rm -rf ./node_modules && rm package-lock.json && npm install"
   },
   "devDependencies": {
-    "@types/enzyme": "^3.1.10",
-    "@types/jest": "^22.2.3",
-    "@types/react": "16.3.12",
+    "@types/enzyme": "3.10.8",
+    "@types/jest": "22.2.3",
+    "@types/react": "16.8.3",
     "@types/react-dom": "16.0.5",
-    "enzyme": "^3.3.0",
+    "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "jest": "^22.4.3",
+    "jest": "22.4.3",
     "parcel-bundler": "1.7.1",
     "react": "16.3.2",
     "react-dom": "16.3.2",
-    "ts-jest": "^22.4.4",
-    "typescript": "2.8.3",
+    "ts-jest": "22.4.4",
+    "typescript": "4.3.4",
     "yarn": "1.6.0"
   },
   "dependencies": {}
